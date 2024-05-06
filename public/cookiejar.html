@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!--
+  Chloe Adams, Isha Narayanan
+  12th December 2023
+  CSE 154
+
+  This file contains the structural html code for the Cookie Jar bakery website. It is meant
+  to be used by caterers or devoted clients. There are several views, once logged in the primary
+  views are the about page, the menu, the reviews page (which shows previous customer reviews) and
+  the profile page (used to access previous transactions and leave reviews)
+
+  Happy browsing!
+-->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='cookiejar.css' rel='stylesheet'>
+  <script src="cookiejar.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Lato&family=Montserrat:wght@200;300&family=Overlock&family=Rock+Salt&display=swap" rel="stylesheet">
+  <title>The Cookie Jar</title>
+</head>
+<body>
+  <header>
+    <h1>
+      The Cookie Jar
+    </h1>
+  </header>
+  <main>
+    <section id="categories-bar">
+      <section id="categories">
+        <button id="about-btn">
+          Our Story
+        </button>
+        <button id="menu-btn">
+          Menu
+        </button>
+        <button id="reviewpage-button">
+          Reviews
+        </button>
+        <button id="profile-btn">
+          Profile
+        </button>
+        <input id="search-bar">
+        <button id="search-btn">Search!</button>
+      </section>
+    </section>
+
+    <section id="intro-page">
+      <section id="intro">
+        <h2>Welcome to Cookie Jar!</h2>
+        <button id='select-login-btn'>Log In</button>
+        <br>
+        <button id='select-createaccount-btn'>Create Account</button>
+      </section>
+    </section>
+
+    <section id="createaccount-page" class='hidden'>
+      <section id="createaccount">
+        <h2>Create an Account!</h2>
+        <form id="input-form">
+          <div>
+            <label for="username-input">Username:</label>
+            <input id="username-input" name="username" type="text" required>
+          </div>
+          <div>
+            <label for="password-input">Password:</label>
+            <input type="text" id="password-input" name="password" required>
+          </div>
+          <div>
+            <label for="email-input">Email:</label>
+            <input type="email" id="email-input" name="email" required>
+          </div>
+          <div>
+            <label for="eventname-input">Event Name:</label>
+            <input type="text" id="eventname-input" name="eventname" required>
+          </div>
+          <div>
+            <label for="partysize-input">Party Size:</label>
+            <input type="number" id="partysize-input" name="partysize" min='0' max='10000'>
+          </div>
+          <div>
+            <label for="date-input">Date:</label>
+            <input type="date" id="date-input" name="date">
+          </div>
+          <button id="createaccount-btn">Create Account</button>
+        </form>
+        <p id="error"></p>
+      </section>
+    </section>
+
+    <section id='login-page' class='hidden'>
+      <section id="login">
+        <h2>Please Log In...</h2>
+        <p>Username</p>
+        <input id='user'>
+        <p>Password</p>
+        <input id='password'>
+        <br></br>
+        <p> Would you like us to save your username for future sessions?</p>
+        <input type="checkbox" id="yes" name="yes" checked />
+        <label for="yes" id="yesLabel">Yes</label>
+        <br></br>
+        <button id='login-btn'>Sign In</button>
+        <p id = "errorP"> </p>
+      </section>
+    </section>
+
+    <section id="about-view" class="hidden">
+      <h3>Welcome to the Cookie Jar...</h3>
+      <section id="about-main">
+        <div>
+          <p>
+            We are delighted to have you here. At Cookie Jar, our commitment to excellence
+            extends past perfected techniques and artful presentations:
+            we want every pastry to transcend the ordinary, and every bite
+            to excite the spirit–and the taste buds. You'll find our menu in the menu tab
+            above. Embark on an adventure with us and get ready
+            to immerse yourself in the joy of discovery.
+          </p>
+        </div>
+        <img src="the-baker.jpg" alt="Our Founder">
+      </section>
+    </section>
+
+    <section id="profile-view" class="hidden">
+      <section id="pv-categories">
+        <button id="profileInfo">My Transactions</button>
+        <button id="review">Leave a Review</button>
+      </section>
+      <section id="pv-content">
+        <section id="pv-profile" class="hidden">
+        </section>
+        <section id="pv-review" class="hidden">
+          <p>We'd love to hear what you thought about your purchase!</p>
+          <form id="review-form">
+            <select name="product">
+              <option value="str-crmpf">Strawberry Cream Puff</option>
+              <option value="pink-cpk">Classic Pink Cupcake</option>
+              <option value="eclair">French Eclair</option>
+              <option value="frost-cp">Frosty Cake Pop</option>
+              <option value="lemon-mt">Lemon Mini Tart</option>
+              <option value="berry-mt">Berry Mini Tart</option>
+              <option value="gngb-cookie">Gingerbread Cookie</option>
+              <option value="baby-cookie">Baby Sugar Cookie</option>
+              <option value="chai-cpk">Spice Chai Cupcake</option>
+              <option value="devil-cp">Chocolate Cake Pop</option>
+              <option value="smpl-cookie">Cookie Sampler Tray</option>
+              <option value="ube-roll">Ube Roll</option>
+              <option value="apple-mt">Apple Mini Tart</option>
+              <option value="pack-danish">Danishes 5ct</option>
+              <option value="rasp-eclair">Raspberry Eclair</option>
+              <option value="choc-crois">Chocolate Croissant</option>
+              <option value="6-macaron">Macarons 6ct</option>
+            </select>
+            <p>Rating, 1-5</p>
+            <input name="score">
+            <p>Additional thoughts?</p>
+            <input name="text">
+            <p>Confirm your username</p>
+            <input name="username">
+          </form>
+          <button id="submit-rvw-btn">Submit Review</button>
+          <p id="review-response"></p>
+        </section>
+      </section>
+    </section>
+
+    <section id="reviews-view" class="hidden">
+      <h3>
+        Check out what others have to say about their experience...
+      </h3>
+      <section id="rv-reviews">
+        <article>
+          <p>
+            5.0/5.0 - Classic Pink Cupcake
+          </p>
+          <p>
+            Can't get enough of these - the secret coconut filling is a wonderful touch.
+            Great job Cookie Jar.
+          </p>
+          <p>
+            -ImportantFigure
+          </p>
+        </article>
+        <article>
+          <p>
+            5.0/5.0 - Lemon Mini Tart
+          </p>
+          <p>
+            This product was so yummy, this is my text review of it!
+          </p>
+          <p>
+            -Melissa
+          </p>
+        </article>
+      </section>
+    </section>
+
+    <section id='menu-view' class='hidden'>
+      <section id="pagemain">
+        <section id='filter-bar'>
+          <div>
+            <label for='type-filter'>
+              Product Type:
+            </label>
+            <select name='Product Type' id='type-filter'>
+              <option value="any_type">
+                All
+              </option>
+              <option value="cookie">
+                Our Famous Cookies
+              </option>
+              <option value="pastry">
+                Pastries
+              </option>
+              <option value="cake">
+                Cakes and Cupcakes
+              </option>
+            </select>
+          </div>
+          <div>
+            <label for='allergen-filter'>
+              Allergens:
+            </label>
+            <select name='Allergens' id='allergen-filter'>
+              <option value="no_allergen">
+                None
+              </option>
+              <option value="gf">
+                Gluten-Free
+              </option>
+              <option value="nf">
+                Nut-Free
+              </option>
+              <option value="nd">
+                Non-Dairy
+              </option>
+            </select>
+          </div>
+          <div>
+            <label for='occasion-filter'>
+              Occasion:
+            </label>
+            <select name='Occasion' id='occasion-filter'>
+              <option value="any_occasion">
+                Any
+              </option>
+              <option value="seasonal">
+                Seasonal
+              </option>
+              <option value="wedding">
+                Wedding
+              </option>
+              <option value="baby">
+                Baby Shower
+              </option>
+              <option value="funeral">
+                ...funeral...
+              </option>
+            </select>
+          </div>
+          <button id="pref-btn">Update Preferences</button>
+          <button id="display-btn">Switch Display</button>
+        </section>
+        <section id="product-display" class="compact">
+        </section>
+      </section>
+    </section>
+
+    <section id="expanded-view" class="hidden">
+      <section id="expanded">
+        <button type="button" id="back-btn"> Back </button>
+        <section id="expanded-viewcontent" class="hidden">
+        </section>
+      </section>
+    </section>
+
+    <section id="confirmation-page" class="hidden">
+      <h2> Order Confirmation </h2>
+      <section id="confirmation">
+      </section>
+      <button type="button" id="back-confirmation"> Back </button>
+      <button type="button" id="next"> Next </button>
+    </section>
+
+    <section id="submission-page" class="hidden">
+      <h2> Order Submission </h2>
+      <section id="submission">
+      </section>
+      <button type="button" id="back-submission"> Back </button>
+      <button type="button" id="submit"> Submit Order </button>
+    </section>
+
+  </main>
+  <footer>
+    <p>
+      Contact Us: 111-222-3344, seattlecookiejar@emails.com
+    </p>
+  </footer>
+</body>
+</html>

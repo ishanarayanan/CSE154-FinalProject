@@ -1,0 +1,473 @@
+/*
+  Chloe Adams, Isha Narayanan
+  12th December 2023
+  CSE 154
+
+  This is a CSS Stylesheet for cookiejar.html. It includes various classes to be toggled, as well
+  as a fun imported fonts. The website uses an appetizing little color scheme.
+ */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('bakery-brown.png');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 0px;
+  margin-bottom: 2px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 0px;
+  padding-bottom: 12px;
+  padding-top: 0px;
+  margin-bottom: 3px;
+}
+
+h1, h2 {
+  font-family: 'Homemade Apple', cursive;
+  text-align: center;
+  background: #9dc17fe0;
+  /* background: #4c230a98; */
+  color: #FFFEFF;
+  background-size: cover;
+}
+
+#categories,
+#pagemain,
+#login,
+#expand,
+.product,
+#expanded-viewcontent,
+#filter-bar,
+#createaccount,
+#intro,
+#confirmation,
+#submission {
+  display: flex;
+}
+
+#categories button {
+  appearance: none;
+  border-width: 3px;
+  border-color: rgba(232, 219, 209, 0);
+  background-color: #4c230a00;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  padding: 4px;
+}
+
+#categories button:hover {
+  border-top-color: white;
+  border-bottom-color: rgb(255, 255, 255);
+}
+
+#createaccount {
+  flex-direction: column;
+  text-align: center;
+}
+
+#intro {
+  align-items: center;
+}
+
+#intro > button {
+  margin: 10px;
+  text-align: center;
+}
+
+#pagemain, #intro {
+  flex-direction: column;
+}
+
+/* ABOUT PAGE STYLING #about-view */
+#about-view h3 {
+  font-size: 38px;
+  color: white;
+  width: 70%;
+  text-align: center;
+  /* background-color: #81b7997d; */
+  padding: 5px;
+  margin: auto;
+  letter-spacing: 2px;
+}
+
+#about-main {
+  display: flex;
+  background: rgba(174, 126, 89, 0.256);
+  margin: auto;
+  margin-top: 10px;
+  width: 90%;
+  padding: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.646);
+}
+
+#about-main p {
+  color: white;
+  font-size: 25px;
+}
+
+#about-main img {
+  padding: 6px;
+  background: #e7316e;
+  border-width: 4px;
+  border-style: double;
+  border-color: rgb(255, 255, 255);
+  height: 200px;
+}
+
+#about-main article {
+  margin: auto;
+  padding: 3px;
+  margin-bottom: 8px;
+  text-align: center;
+  color: white;
+}
+
+/* REVIEW PAGE STYLING #reviews-view */
+#reviews-view h3 {
+  text-align: center;
+  font-size: 25px;
+  margin: auto;
+  margin-bottom: 18px;
+  width: 85%;
+  color: white;
+  background-color: #4c230a53;
+}
+
+#reviews-view article {
+  width: 60%;
+  text-align: center;
+  font-size: 18px;
+  margin: auto;
+  margin-bottom: 18px;
+  background-color: #e959894b;
+  border: white;
+  border-style: double;
+  border-width: 4px;
+  color: white;
+}
+
+/* PROFILE PAGE STYLING #profile-view */
+#profile-view {
+  text-align: center;
+}
+
+#confirmation, #submission, #pv-profile, #pv-review {
+  background: rgba(255, 255, 255, 0.594);
+}
+
+#pv-profile {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+#confirmation, #submission {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* FILTER BAR STYLING */
+#filter-bar {
+  justify-content: space-around;
+  flex-shrink: 2;
+  background-color: rgba(255, 255, 255, 0.856);
+  margin: 0px;
+  padding: 7px;
+}
+
+#filter-bar select {
+  appearance: none;
+  border-width: 1px;
+  border-color: #4C230A;
+  border-radius: 0.3em;
+  color: #4C230A;
+  background-color: rgb(243, 226, 227);
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+#filter-bar > button, #menu-view label {
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #4C230A;
+  background-color: #fffeff00;
+  padding-left: 7px;
+  margin: 5px;
+}
+
+#filter-bar > button {
+  border-top-color: white;
+  border-bottom-color: white;
+  border-left-color: rgba(243, 226, 227, 0);
+  border-right-color: rgba(243, 226, 227, 0);
+  border-width: 2px;
+}
+
+#menu-view label {
+  font-size: 17px;
+  text-decoration: underline;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+/* work in progress */
+.compact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* work in progress */
+.party {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.hidden {
+  display: none;
+}
+
+#categories {
+  justify-content: space-evenly;
+  background-color: #e7316ed8;
+  padding: 0px;
+  font-size: 13px;
+  color: #FFFEFF;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  letter-spacing: 3px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  line-height: 0px;
+}
+
+/* PRODUCT STYLING */
+#product-display img {
+  width: 225px;
+  height: 275px;
+  object-fit: cover;
+  padding: 12px;
+}
+
+.product {
+  flex-direction: column;
+  text-align: center;
+  border: solid;
+  border-style: double;
+  border-color: #d1b4a1;
+  border-width: 1px;
+  margin: 13px;
+  background-color: rgba(255, 255, 255, 0.895);
+}
+
+.product-party {
+  width: 15%;
+  background-color: rgb(255, 0, 153);
+  border-color: rgb(110, 255, 110);
+  border-width: 10px;
+  border-style: double;
+  margin: 13px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.product-name {
+  font-size: 17px;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #4C230A;
+  margin-top: 1px;
+  padding-top: 1px;
+  margin-bottom: 2px;
+}
+
+.product-summary {
+  font-family: 'Homemade Apple', cursive;
+  font-size: 13px;
+  letter-spacing: 2px;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 2px;
+  color: #4C230A;
+}
+
+.summary-compact {
+  font-family: 'Homemade Apple', cursive;
+  font-size: 8px;
+  letter-spacing: 2px;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 2px;
+  color: #4C230A;
+}
+
+.price {
+  margin-top: 4px;
+  margin-bottom: 6px;
+  font-family: 'Montserrat', sans-serif;
+  color: #4C230A;
+  font-weight: bold;
+}
+
+/* LOGIN STYLING */
+#login p, #createaccount label, #yesLabel, #createaccount p {
+  font-family: 'Montserrat', sans-serif;
+  color: #4C230A;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#login {
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#login-btn, #login h2, #expanded-view button, #intro h2, #createaccount-page h2 {
+  font-size: 30px;
+}
+
+#login-btn,
+#intro > button,
+#createaccount-btn,
+#confirmation-page button,
+#submission-page button,
+#pv-categories button
+{
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  background-color: #9dc17f;
+  border: none;
+  padding: 14px 45px;
+  text-align: center;
+  text-decoration: solid;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  width: 250px;
+}
+
+#login h2, #intro h2, #createaccount-page h2, #confirmation-page h2, #submission-page h2 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  color: #4C230A;
+  background-color: rgb(255, 255, 255);
+  width: 40%;
+  border-radius: 0.4em;
+  border-color: #4C230A;
+  margin: auto;
+  padding: 6px;
+}
+
+#confirmation-page, #submission-page {
+  text-align: center;
+}
+
+#expanded-viewcontent {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 6px;
+  background: rgba(255, 255, 255, 0.594);
+}
+
+#expanded-viewcontent img {
+  width: 30%;
+  max-width: 50%;
+  padding: 15px;
+}
+
+#expanded-viewcontent #text p {
+  text-align: center;
+  padding: 3%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#expanded-view button {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  background-color: #9dc17f;
+  border: none;
+  padding: 14px 45px;
+  text-align: center;
+  text-decoration: solid;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+#myform {
+  text-align: center;
+  padding: 5px;
+  border: 1px dotted #ccc;
+  margin: 2%;
+}
+
+.qty {
+  width: 40px;
+  height: 25px;
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+input.qtyplus {
+  width: 25px;
+  height: 25px;
+}
+
+input.qtyminus {
+  width: 25px;
+  height: 25px;
+}
+
+form {
+  margin: auto;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+form > div {
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  line-height: 0px;
+  background-color: #e7316ecf;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
